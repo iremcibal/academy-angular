@@ -1,0 +1,10 @@
+<ol class="list-group list-group-numbered">
+    <li *ngFor="let blacklist of blacklists" 
+    class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">{{blacklist.applicantId}}</div>
+        <div class="fw-bold">{{blacklist.date}}</div>
+      </div>
+      <span class="badge bg-primary rounded-pill">{{blacklist.reason}}</span>
+    </li>
+</ol>

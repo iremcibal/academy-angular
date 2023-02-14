@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BootcampComponent } from './components/bootcamp/bootcamp.component';
 import { ApplicationComponent } from './components/application/application.component';
 import { NaviComponent } from './components/navi/navi.component';
+import { BlacklistComponent } from './components/blacklist/blacklist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BootcampComponent,
     ApplicationComponent,
-    NaviComponent
+    NaviComponent,
+    BlacklistComponent
   ],
   imports: [
     BrowserModule,

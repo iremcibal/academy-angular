@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import { BootcampResponseModel } from '../models/bootcamp/bootcampResponseModel';
 import { Observable } from 'rxjs';
+import { ListResponseModel } from '../models/ListResponseModel';
+import { Bootcamp } from '../models/bootcamp/bootcamp';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class BootcampService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getBootcamps():Observable<BootcampResponseModel>{
-    return this.httpClient.get<BootcampResponseModel>(this.getAll);
+  getBootcamps():Observable<ListResponseModel<Bootcamp>>{
+    return this.httpClient.get<ListResponseModel<Bootcamp>>(this.getAll);
   }
 }
