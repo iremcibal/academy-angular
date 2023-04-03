@@ -2,9 +2,9 @@
     <li *ngFor="let application of applications" 
     class="list-group-item d-flex justify-content-between align-items-start">
       <div class="ms-2 me-auto">
-        <div class="fw-bold">{{application.applicantId}}</div>
-        <div class="fw-bold">{{application.stateId}}</div>
+        <div class="fw-bold">{{application.applicantUserFirstName}} {{application.applicantUserLastName}}</div>
+        <div class="fw-bold">{{application.bootcampName}} Bootcamp'ine {{application.stateInfo}}</div>
       </div>
-      <span class="badge bg-primary rounded-pill">{{application.bootcampId}}</span>
+      <span class="badge bg-primary rounded-pill">{{application.applicantUserEmail}}</span>
     </li>
 </ol>

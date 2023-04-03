@@ -1,8 +1,8 @@
 <div *ngFor="let bootcamp of bootcamps" class="card" style="width: 18rem;display:inline-flex;margin: 2rem;">
-    <img src="..." class="card-img-top" alt="...">
+    <img [src]="imgUrl + bootcamp.imageImagePath" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">{{bootcamp.name}}</h5>
-      <p class="card-text">{{bootcamp.startDate}} - {{bootcamp.endDate}}</p>
-      <a href="#" class="btn btn-primary">Başvur</a>
+      <h5 class="card-title">{{bootcamp.name}} {{bootcamp.stateInfo}}</h5>
+      <p class="card-text">Eğitmenimiz: {{bootcamp.instructorUserFirstName}} {{bootcamp.instructorUserLastName}}</p>
+      <a href="#" class="btn btn-primary">Başvur</a><a (click)="getSelectedBootcampDetail(bootcamp)" routerLink="/Bootcamps/bootcampId/{{bootcamp.id}}" class="btn btn-danger">İncele</a>
     </div>
 </div>

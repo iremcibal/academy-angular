@@ -7,6 +7,9 @@ import { BootcampComponent } from './components/bootcamp/bootcamp.component';
 import { ApplicationComponent } from './components/application/application.component';
 import { NaviComponent } from './components/navi/navi.component';
 import { BlacklistComponent } from './components/blacklist/blacklist.component';
+import { ImageComponent } from './components/image/image.component';
+import { BootcampDetailComponent } from './components/bootcamp-detail/bootcamp-detail.component';
+import { InstructorComponent } from './components/instructor/instructor.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { BlacklistComponent } from './components/blacklist/blacklist.component';
     BootcampComponent,
     ApplicationComponent,
     NaviComponent,
-    BlacklistComponent
+    BlacklistComponent,
+    ImageComponent,
+    BootcampDetailComponent,
+    InstructorComponent
   ],
   imports: [
     BrowserModule,

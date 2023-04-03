@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Blacklist } from 'src/app/models/blacklist/blacklist';
+import { ListBlacklistResponse } from 'src/app/models/blacklist/listBlacklistResponse';
 import { BlacklistService } from 'src/app/services/blacklist.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { BlacklistService } from 'src/app/services/blacklist.service';
 })
 export class BlacklistComponent {
 
-  blacklists:Blacklist[] = [];
+  blacklists:ListBlacklistResponse[] = [];
   constructor(private blacklistService:BlacklistService){}
 
   ngOnInit(): void{

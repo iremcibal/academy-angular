@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Application } from '../models/application/application';
+import { ListApplicationResponse } from '../models/application/listApplicationResponse';
 import { ListResponseModel } from '../models/ListResponseModel';
 
 @Injectable({
@@ -9,11 +9,12 @@ import { ListResponseModel } from '../models/ListResponseModel';
 })
 export class ApplicationService {
 
-  getAll = "https://localhost:7258/api/Applications";
+  getAll = "https://localhost:7258/api/Applications/";
 
   constructor(private httpClient : HttpClient) { }
 
-  getApplications(): Observable<ListResponseModel<Application>>{
-    return this.httpClient.get<ListResponseModel<Application>>(this.getAll);
+  getApplications(): Observable<ListResponseModel<ListApplicationResponse>>{
+    let newPath= this.getAll + "GetAll";
+    return this.httpClient.get<ListResponseModel<ListApplicationResponse>>(newPath);
   }
 }

@@ -1,0 +1,44 @@
+<div >
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          [src]="imgUrl + selectedBootcamp.imageImagePath"
+          class="img-fluid rounded-start"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{selectedBootcamp.name}}</h5>
+          <p class="card-text">
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">{{selectedBootcamp.stateInfo}}</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="true" href="#">Active</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Eğitmenimiz 
+        <h5 (click)="getSelectedInstructor(selectedBootcamp.instructorId)" routerLink="/Instructors/instructorId/{{selectedBootcamp.instructorId}}" class="card-title" >{{selectedBootcamp.instructorUserFirstName}} {{selectedBootcamp.instructorUserLastName}}</h5></h5>
+      <p class="card-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Laudantium numquam quos eos rerum doloremque iure amet error vero possimus ad dolorem laborum minus nihil sunt, tempore esse natus nesciunt necessitatibus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Mollitia totam perspiciatis harum. Libero facilis architecto 
+         fuga vero rem possimus perferendis, maxime quidem consequatur quia omnis asperiores 
+         dolorem dolore iusto! Ad!
+      </p>
+      <a href="#" class="btn btn-primary">Başvur</a>
+    </div>
+  </div>
+</div>

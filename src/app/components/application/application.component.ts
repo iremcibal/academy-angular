@@ -1,5 +1,5 @@
+import { ListApplicationResponse } from './../../models/application/listApplicationResponse';
 import { Component } from '@angular/core';
-import { Application } from 'src/app/models/application/application';
 import { ApplicationService } from 'src/app/services/application.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ApplicationService } from 'src/app/services/application.service';
 })
 export class ApplicationComponent {
 
-  applications : Application[]= [];
+  applications : ListApplicationResponse[]= [];
   constructor(private applicationService: ApplicationService) {}
 
   ngOnInit(): void{

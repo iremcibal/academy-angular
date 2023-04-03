@@ -1,5 +1,5 @@
+import { ListBootcampResponse } from 'src/app/models/bootcamp/listBootcampResponse';
 import { Component, OnInit } from '@angular/core';
-import { Bootcamp } from 'src/app/models/bootcamp/bootcamp';
 import { BootcampService } from 'src/app/services/bootcamp.service';
 
 
@@ -10,7 +10,9 @@ import { BootcampService } from 'src/app/services/bootcamp.service';
 })
 export class BootcampComponent implements OnInit {
 
-  bootcamps:Bootcamp[] = [];
+  bootcamps:ListBootcampResponse[]=[];
+  selectedBootcamp : ListBootcampResponse;
+  imgUrl:string="https://localhost:7258/Uploads/Images/";
   constructor(private bootcampService:BootcampService){ }
 
   ngOnInit(): void {
@@ -21,6 +23,11 @@ export class BootcampComponent implements OnInit {
     this.bootcampService.getBootcamps().subscribe(response=>{
       this.bootcamps = response.data
     })
-
   }
+
+  getSelectedBootcampDetail(bootcamp:ListBootcampResponse){
+    this.selectedBootcamp = bootcamp;
+  }
+
+  
 }
